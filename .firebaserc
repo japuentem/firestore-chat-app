@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-app-505b8": {
+      "hosting": {
+        "app": [
+          "chat-app-505b8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chat-app-505b8"
+  }
+}
