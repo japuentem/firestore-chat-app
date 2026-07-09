@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { getApp, initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth, initializeAuth, indexedDBLocalPersistence } from '@angular/fire/auth';
+import { provideAuth, getAuth, initializeAuth } from '@angular/fire/auth';
+import { indexedDBLocalPersistence } from 'firebase/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { Capacitor } from '@capacitor/core';
 
@@ -17,9 +18,11 @@ import { Capacitor } from '@capacitor/core';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule
+  ],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideFirebaseApp(() => initializeApp(environment.firebase)), 
-    // provideAuth(() => getAuth()), 
     provideAuth(() => {
       if (Capacitor.isNativePlatform()) {
         return initializeAuth(getApp(), {
@@ -31,7 +34,6 @@ import { Capacitor } from '@capacitor/core';
     }), 
     provideFirestore(() => getFirestore())
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

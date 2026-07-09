@@ -5,6 +5,7 @@ import { ModalController, PopoverController } from '@ionic/angular';
 import { Observable, take } from 'rxjs';
 
 @Component({
+  standalone: false,
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
@@ -120,3 +121,4 @@ export class HomePage implements OnInit {
     return user;
   }
 }
+

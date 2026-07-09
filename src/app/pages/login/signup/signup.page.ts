@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
+  standalone: false,
   selector: 'app-signup',
   templateUrl: './signup.page.html',
   styleUrls: ['./signup.page.scss'],
@@ -84,3 +85,4 @@ export class SignupPage implements OnInit {
   }
 
 }
+

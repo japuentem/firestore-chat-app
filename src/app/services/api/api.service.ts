@@ -1,4 +1,4 @@
-import { addDoc, collection, collectionData, doc, docData, Firestore, getDoc, getDocs, orderBy, OrderByDirection, query, setDoc, where } from '@angular/fire/firestore';
+import { addDoc, collection, collectionData, doc, docData, Firestore, getDoc, getDocs, orderBy, query, setDoc, where } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -66,7 +66,7 @@ export class ApiService {
     return where(fieldPath, condition, value);
   }
 
-  orderByQuery(fieldPath, directionStr: OrderByDirection = 'asc') {
+  orderByQuery(fieldPath, directionStr: 'asc' | 'desc' = 'asc') {
     return orderBy(fieldPath, directionStr);
   }
 }

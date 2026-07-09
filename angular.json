@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "buildTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "app:build:development"
+              "buildTarget": "app:build:development"
             },
             "ci": {
               "progress": false
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app:build"
+            "buildTarget": "app:build"
           }
         },
         "test": {
@@ -141,7 +141,7 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "app:build:production",
+            "buildTarget": "app:build:production",
             "firebaseProject": "chat-app-505b8",
             "firebaseHostingSite": "chat-app-505b8"
           }

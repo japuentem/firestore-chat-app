@@ -1,6 +1,6 @@
 import { ApiService } from './../api/api.service';
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -76,7 +76,7 @@ export class AuthService {
 
   async logout() {
     try {
-      await this.fireAuth.signOut();
+      await signOut(this.fireAuth);
       this._uid.next(null);
       this.currentUser = null;
       return true;

@@ -5,6 +5,7 @@ import { AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
+  standalone: false,
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
@@ -79,3 +80,4 @@ export class LoginPage implements OnInit {
   }
 
 }
+

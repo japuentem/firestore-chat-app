@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
@@ -8,3 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   constructor() {}
 }
+
