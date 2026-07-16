@@ -27,13 +27,12 @@
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
-    "angularfire": "^1.2.0",
     "firebase": "^12.14.0",
     "http-proxy-middleware": "^3.0.7",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.2.11",
@@ -46,7 +45,7 @@
     "@angular/compiler-cli": "^21.2.15",
     "@angular/language-service": "^15.0.0",
     "@capacitor/cli": "8.3.4",
-    "@ionic/angular-toolkit": "^6.0.0",
+    "@ionic/angular-toolkit": "^12.3.0",
     "@types/jasmine": "~4.0.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
@@ -68,5 +67,8 @@
   },
   "description": "An Ionic project",
   "main": "karma.conf.js",
-  "license": "ISC"
+  "license": "ISC",
+  "overrides": {
+    "esbuild": "0.27.4"
+  }
 }
