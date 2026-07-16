@@ -29,6 +29,7 @@
     "@ionic/angular": "^6.1.9",
     "angularfire": "^1.2.0",
     "firebase": "^12.14.0",
+    "http-proxy-middleware": "^3.0.7",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
